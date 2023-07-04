@@ -11,6 +11,9 @@ class MenuItem(models.Model):
     def __str__(self) -> str:
         return f'{self.title} : {str(self.price)}'
 
+    def get_item(self) -> str:
+        return f'{self.title} : {str(self.price)}'
+
 
 class Booking(models.Model):
     name = models.CharField(max_length=255)
